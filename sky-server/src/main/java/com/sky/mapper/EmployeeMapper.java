@@ -32,4 +32,10 @@ public interface EmployeeMapper {
     * 启用禁用员工账号
     * */
     void update(Employee employee);
+
+    /*
+     * 编辑员工1.查询回显
+     * */
+    @Select("select * from employee where id = #{id}")
+    Employee getById(Long id);
 }

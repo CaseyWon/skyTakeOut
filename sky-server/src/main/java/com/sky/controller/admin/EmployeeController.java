@@ -103,4 +103,22 @@ public class EmployeeController {
         return Result.success();
     }
 
+    /*
+    * 编辑员工1.查询回显
+    * */
+    @GetMapping("/{id}")
+    public Result<Employee> getById(@PathVariable Long id){
+        Employee employee = employeeService.getById(id);
+        return Result.success(employee);
+    }
+
+    /*
+     * 编辑员工2.修改员工
+     * */
+    @PutMapping
+    public Result update(@RequestBody EmployeeDTO employeeDTO){
+        employeeService.update(employeeDTO);
+        return Result.success();
+    }
+
 }
