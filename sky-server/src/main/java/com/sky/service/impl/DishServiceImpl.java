@@ -89,4 +89,16 @@ public class DishServiceImpl implements DishService {
             dishFlavorMapper.deleteByDishId(id);//删除菜品关联口味
         }
     }
+
+    /*
+    * 起售禁售菜品
+    * */
+    @Override
+    public void startOrStop(Integer status, Long id) {
+        Dish dish = new Dish();
+        dish.setStatus(status);
+        dish.setId(id);
+        dishMapper.startOrStop(dish);
+
+    }
 }

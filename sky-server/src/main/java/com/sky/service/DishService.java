@@ -18,4 +18,9 @@ public interface DishService {
     * 菜品批量删除
     * */
     void deleteBatch(List<Long> ids);
+
+    /*
+    * 起售禁售菜品
+    * */
+    void startOrStop(Integer status, Long id);
 }
