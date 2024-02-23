@@ -39,7 +39,12 @@ public interface DishMapper {
     /*
     * 起售停售菜品
     * */
-    @AutoFill(OperationType.UPDATE)
     @Update("update dish set status = #{status} where id = #{id}")
     void startOrStop(Dish dish);
+
+    /*
+    * 修改菜品
+    * */
+    @AutoFill(OperationType.UPDATE)
+    void update(Dish dish);
 }
