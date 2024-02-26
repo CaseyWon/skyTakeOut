@@ -15,8 +15,6 @@ public interface SetmealMapper {
 
     /**
      * 根据分类id查询套餐的数量
-     * @param id
-     * @return
      */
     @Select("select count(id) from setmeal where category_id = #{categoryId}")
     Integer countByCategoryId(Long id);
@@ -34,8 +32,6 @@ public interface SetmealMapper {
 
     /**
      * 根据id查询套餐
-     * @param id
-     * @return
      */
     @Select("select * from setmeal where id = #{id}")
     Setmeal getById(Long id);
@@ -45,4 +41,10 @@ public interface SetmealMapper {
      */
     @Delete("delete from setmeal where id = #{id}")
     void deleteById(Long setmealId);
+
+    /*
+    * 修改套餐
+    * */
+    @AutoFill(OperationType.UPDATE)
+    void update(Setmeal setmeal);
 }
