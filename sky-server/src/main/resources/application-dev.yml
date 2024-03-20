@@ -11,3 +11,7 @@ sky:
     access-key-id: LTAI5tSmRfA835vyt4Y3Qsn5
     access-key-secret: mGg5s7MYVS3ezh5B7g98XkwpJv3kZU
     bucket-name: caseynew
+  redis:
+    host: localhost
+    port: 6379
+    database: 10
