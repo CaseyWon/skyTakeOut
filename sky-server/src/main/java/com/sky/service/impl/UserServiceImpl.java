@@ -72,6 +72,8 @@ public class UserServiceImpl implements UserService {
         map.put("secret",weChatProperties.getSecret());
         map.put("js_code",code);
         map.put("grant_type","authorization_code");
+
+        //HttpClient已经封装到HttpClientUtil工具类中
         String json = HttpClientUtil.doGet(WX_LOGIN, map);
 
         JSONObject jsonObject = JSON.parseObject(json);
