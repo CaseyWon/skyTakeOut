@@ -12,7 +12,7 @@ import java.util.List;
 
 @Mapper
 public interface DishFlavorMapper {
-    @AutoFill(OperationType.INSERT)
+
     void insertBatch(List<DishFlavor> flavors);
 
     @Delete("delete from dish_flavor where dish_id = #{dishId}")
