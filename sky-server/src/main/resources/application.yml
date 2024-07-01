@@ -60,3 +60,8 @@ sky:
     weChatPayCertFilePath: ${sky.wechat.weChatPayCertFilePath}
     notifyUrl: ${sky.wechat.notifyUrl}
     refundNotifyUrl: ${sky.wechat.refundNotifyUrl}
+
+  shop:
+    address: 上海市金山区亭林镇亭林小学
+  baidu:
+    ak: uWepOXw8beefNjfIcaZzQNZzkpSOt8Os
